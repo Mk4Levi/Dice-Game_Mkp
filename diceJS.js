@@ -46,7 +46,9 @@ if (diceNum2 == 1) {
 //
 
 if (diceNum1 == 6) {
-    document.querySelector("#result").innerHTML = "Zoro is WINNER";
+    document.querySelector("#result").innerHTML = "Zoro is WINNER !";
 } else if (diceNum2 == 6) {
-    document.querySelector("#result").innerHTML = "Sanji is WINNER";
+    document.querySelector("#result").innerHTML = "Sanji is WINNER !";
+} else if (diceNum1 == 6 && diceNum2 == 6) {
+    document.querySelector("#result").innerHTML = "It's a DRAW !, Roll the Dice Again";
 }

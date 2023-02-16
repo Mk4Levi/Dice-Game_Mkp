@@ -15,12 +15,17 @@ body {
 
 
 h1 {
-    margin: 10px;
+    margin: 5px;
     font-family: 'Lobster', cursive;
     text-shadow: 5px 0 #232931;
-    font-size: 4rem;
+    font-size: 3rem;
     color: #4ECCA3;
     text-align: center;
+}
+
+h2 {
+  color: aqua;
+  padding-bottom: 1px;
 }
 
 button {
