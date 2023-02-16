@@ -1,2 +1,2 @@
 # Dice-Game_Mkp
- Click to roll the Dice :-
+ Roll the Dice and decide the Winner. 

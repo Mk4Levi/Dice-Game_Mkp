@@ -46,7 +46,7 @@ if (diceNum2 == 1) {
 //
 
 if (diceNum1 == 6) {
-    document.querySelector("#result").innerHTML = "Player-1 is the WINNER";
+    document.querySelector("#result").innerHTML = "Zoro is WINNER";
 } else if (diceNum2 == 6) {
-    document.querySelector("#result").innerHTML = "Player-2 is the WINNER";
+    document.querySelector("#result").innerHTML = "Sanji is WINNER";
 }
