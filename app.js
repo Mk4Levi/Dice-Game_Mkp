@@ -1,5 +1,6 @@
 // document.querySelector("button").onclick = eventHandler;
 // now above by using addEventListener :-
+
 document.querySelector("button").addEventListener("click", eventHandler);
 function eventHandler() {
     location.reload();
