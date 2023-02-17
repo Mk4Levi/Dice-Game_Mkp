@@ -1,55 +1,37 @@
-// document.querySelector("button").onclick = eventHandler;
-// now above by using addEventListener :-
-
-document.querySelector("button").addEventListener("click", eventHandler);
-function eventHandler() {
+// for reloading 
+document.querySelector("button").addEventListener("click", reloadFunct);
+function reloadFunct() {
     location.reload();
 }
 
-let diceNum1 = Math.random() * 5 ;
-diceNum1 = Math.round(diceNum1) + 1 ;
 
-// console.log(diceNum1);
+// for Dice-1
+let randomNum1 = Math.round(Math.random() * 5) + 1;
 
-if (diceNum1 == 1) {
-    document.querySelector(".img1").setAttribute("src", "images/dice1.png");
-} else if (diceNum1 == 2) {
-    document.querySelector(".img1").setAttribute("src", "images/dice2.png");
-} else if (diceNum1 == 3) {
-    document.querySelector(".img1").setAttribute("src", "images/dice3.png");
-} else if (diceNum1 == 4) {
-    document.querySelector(".img1").setAttribute("src", "images/dice4.png");
-} else if (diceNum1 == 5) {
-    document.querySelector(".img1").setAttribute("src", "images/dice5.png");
-} else if (diceNum1 == 6) {
-    document.querySelector(".img1").setAttribute("src", "images/dice6.png");
-}
+let randomImgSrc = "images/dice" + randomNum1 + ".png";
 
-let diceNum2 = Math.random() * 5;
-diceNum2 = Math.round(diceNum2) + 1;
+let image1 = document.querySelector(".img1");
 
-// console.log(diceNum2);
+image1.setAttribute("src", randomImgSrc);
 
-if (diceNum2 == 1) {
-  document.querySelector(".img2").setAttribute("src", "images/dice1.png");
-} else if (diceNum2 == 2) {
-  document.querySelector(".img2").setAttribute("src", "images/dice2.png");
-} else if (diceNum2 == 3) {
-  document.querySelector(".img2").setAttribute("src", "images/dice3.png");
-} else if (diceNum2 == 4) {
-  document.querySelector(".img2").setAttribute("src", "images/dice4.png");
-} else if (diceNum2 == 5) {
-  document.querySelector(".img2").setAttribute("src", "images/dice5.png");
-} else if (diceNum2 == 6) {
-  document.querySelector(".img2").setAttribute("src", "images/dice6.png");
-}
 
-//
+// for Dice-2
+let randomNum2 = Math.round(Math.random() * 5) + 1;
 
-if (diceNum1 == 6) {
-    document.querySelector("#result").innerHTML = "Zoro is WINNER !";
-} else if (diceNum2 == 6) {
-    document.querySelector("#result").innerHTML = "Sanji is WINNER !";
-} else if (diceNum1 == 6 && diceNum2 == 6) {
-    document.querySelector("#result").innerHTML = "It's a DRAW !, Roll the Dice Again";
+let randomImgSrc2 = "images/dice" + randomNum2 + ".png";
+
+let image2 = document.querySelector(".img2");
+
+image2.setAttribute("src", randomImgSrc2);
+
+
+// output result :-
+if (randomNum1 > randomNum2) {
+  document.querySelector("#result").innerHTML = "🚗🚗 Player-1 is the WINNER";
+} 
+else if (randomNum2 > randomNum1) {
+  document.querySelector("#result").innerHTML = "Player-2 is the WINNER 🚚🚚";
+} 
+else {
+  document.querySelector("#result").innerHTML = "🕵️‍♀️ It's a Draw, Try Again 🕵️‍♀️";
 }
